@@ -1940,7 +1940,7 @@ class Application
     protected static $_coreHelpers = array(
         'get','delete','put','post','any','before','after','config','template',
         'display','fetch','pass','helper','run','error','condition','redirect',
-        'partial','status'
+        'partial','status','patch'
     );
 
     /**
@@ -2377,7 +2377,7 @@ class Application
             );
         }
 
-        if (in_array($name, array('get','delete','put','post','any'))) {
+        if (in_array($name, array('get','delete','put','post','any','patch'))) {
             if ($name != 'any' && (count($arguments) < 2
                 || !is_callable($arguments[1]))
             ) {
